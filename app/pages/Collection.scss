@@ -1,0 +1,28 @@
+.square {
+  position: relative;
+  background: #4f81bd;
+  border: 3px solid #385d8a;
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+#podium {
+  margin-top: 5%;
+  & > div:first-child {
+    padding-top: 5%;
+  }
+  & > div:last-child {
+    padding-top: 10%;
+  }
+
+  h1 {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    margin-bottom: 0;
+  }
+}
