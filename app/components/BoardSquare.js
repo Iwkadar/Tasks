@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { moveTask } from './utils.js';
+import { moveTask } from './../store';
 import { ItemTypes } from './Constants';
 import { DropTarget } from 'react-dnd';
 

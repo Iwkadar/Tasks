@@ -5,6 +5,7 @@ import HTML5Backend from 'react-dnd-html5-backend';
 
 import BoardSquare from './BoardSquare';
 import Task from './Task';
+import { setTaskPosition } from './../store'
 
 import styles from './Board.scss';
 
@@ -14,6 +15,10 @@ class Board extends React.Component {
     this.boxTitle = ['Tasks', 'User 2', 'User 1', 'User 3'];
     this.tasks = [];
     this.completeTasks();
+  }
+
+  componentWillMount() {
+    setTaskPosition();
   }
 
   completeTasks() {
