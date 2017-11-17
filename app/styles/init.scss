@@ -1,6 +1,25 @@
 :global {
 	body {
+		.container {
+			margin-top: 2%;
+			@media only screen and (max-width: 767px) {
+				width: 60%;
+				margin: auto;
+			}
+			@media only screen and (min-width: 768px) {
+				width: 94%;
+			}
+			@media only screen and (min-width: 992px) {
+				width: 850px;
+			}
+		  @media only screen and (min-width: 1200px) {
+		    width: 850px;
+			}
+		}
+
     p {
+			margin-top: 5px;
+			margin-bottom: 5px;
       text-align: center;
     }
   }

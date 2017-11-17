@@ -26,6 +26,23 @@ const config = {
           'css-loader',
         ],
       }, {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              hash: 'sha512',
+              digest: 'hex',
+              name: '[hash].[ext]',
+            },
+          }, {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true,
+            },
+          },
+        ],
+      },{
         test: /\.(scss|sass)$/,
         use: [{
           loader: 'style-loader',
@@ -42,6 +59,17 @@ const config = {
             includePaths: ['./app'],
           },
         }],
+      }, {
+        test: /\.(eot|woff|woff2|ttf)(\?\S*)?$/,
+        use: [
+          {
+            loader:  'url-loader',
+            options: {
+              limit: 100000,
+              name: '[name].[ext]'
+            }
+          }
+        ]
       },
       {
         test: /\.(js|jsx)$/,

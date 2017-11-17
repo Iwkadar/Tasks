@@ -4,12 +4,12 @@ import 'styles/init.scss';
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
+import Board from 'components/Board';
+import { observe } from 'components/utils.js';
 
-
+observe(taskPosition =>
 render(
-	<Router>
-		<App />
-	</Router>,
+	<Board taskPosition={taskPosition} />,
 	document.getElementById('app')
+)
 );
